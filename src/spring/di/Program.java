@@ -8,6 +8,9 @@ import spring.di.entity.NewlecExam;
 import spring.di.ui.ExamConsole;
 import spring.di.ui.GridExamConsole;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -25,5 +28,11 @@ public class Program {
 		ExamConsole console = (ExamConsole) context.getBean("console");
 		//ExamConsole console = context.getBean(ExamConsole.class);
 		console.print();
+
+		List<Exam> exams = (List<Exam>) context.getBean("exams");
+
+		for (Exam e : exams) {
+			System.out.println(e);
+		}
 	}
 }
