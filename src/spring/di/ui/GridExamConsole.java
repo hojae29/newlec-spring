@@ -1,15 +1,15 @@
 package spring.di.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import spring.di.entity.Exam;
 
+@Component("console")
 public class GridExamConsole implements ExamConsole {
 
 	// 필드에 @Autowired 붙일시 기본생성자를 통해 DI
 	// required 옵션을 false로 설정하면 등록된 빈이 없어도 오류가 발생하지 않는다.
-	@Autowired(required = false)
-	@Qualifier("exam2")
+	@Autowired
 	private Exam exam;
 	
 	public GridExamConsole() {

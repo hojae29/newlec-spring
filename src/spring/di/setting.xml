@@ -10,11 +10,8 @@
        http://www.springframework.org/schema/util/spring-util-3.0.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 어노테이션을 탐색하게 하는 설정-->
-    <context:annotation-config/>
+    <!-- spring.di.ui 패키지 안에 있는 @Component가 붙은 클래스를 탐색하여 빈으로 등록해준다 -->
+    <!--<context:annotation-config/> 의 기능도 포함하고 있다. -->
+    <context:component-scan base-package="spring.di.ui, spring.di.entity"/>
 
-    <bean id="exam1" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20" p:math="30" p:com="40"/>
-    <bean id="exam2" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10" p:math="10" p:com="10"/>
-
-    <bean id="console" class="spring.di.ui.GridExamConsole"/>
 </beans>
