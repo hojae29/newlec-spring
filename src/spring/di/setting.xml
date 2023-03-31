@@ -12,6 +12,6 @@
 
     <!-- spring.di.ui 패키지 안에 있는 @Component가 붙은 클래스를 탐색하여 빈으로 등록해준다 -->
     <!--<context:annotation-config/> 의 기능도 포함하고 있다. -->
-    <context:component-scan base-package="spring.di.ui, spring.di.entity"/>
+    <!--<context:component-scan base-package="spring.di.ui, spring.di.entity"/>-->
 
 </beans>
